@@ -56,14 +56,6 @@ done
 fi
 apt-get install python-mysqldb --yes
 while true; do
-    read -p "Do you wish to install phpmyadmin? " yn
-    case $yn in
-        [Yy]* ) apt install phpmyadmin --yes; break;;
-        [Nn]* ) echo "phpmyadmin not installed"; sleep 5; break;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
-while true; do
     read -p "Do you wish to install resilio sync? " yn
     case $yn in
         [Yy]* ) wget https://download-cdn.getsync.com/2.0.128/PiWD/bittorrent-sync-pi-server_2.0.128_armhf.deb; sudo dpkg -i bittorrent-sync-pi-server_2.0.128_armhf.deb; rm bittorrent-sync-pi-server_2.0.128_armhf.deb; break;;
