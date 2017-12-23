@@ -4,7 +4,9 @@ It outputs audio to HDMI and Jack and video(if available) to HDMI.
 
 This project was designed to be installed on a fresh install of raspbian and not to have any other tasks running.
 
+----------------
 Important Notes:
+----------------
 
 The 3 folders must be at the following locations(they are created during setup):
 /home/pi/data/syncaod/media/1/
@@ -23,9 +25,12 @@ The program will recognize the following folders in the USB drive:
 
 The files can either be put in the specified folders or Resilio sync can be used to sync them, the setup installs it if the prompt is yes.
 Resilio is accesible on port 8888.
-The initial user and password for the schedule interface is "orar" without brackets, and can be changed in the login.php file.
 
+The initial USER and PASSWORD for the schedule interface is "orar" without brackets, and can be changed in the login.php file. I didn't want to leave the interface without a little bit of security.
+
+--------------------------
 Installation instructions:
+--------------------------
 
 Download the files with command:
 git clone https://github.com/error216216/raspbian-scheduled-media-player.git
