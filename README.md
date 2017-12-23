@@ -21,6 +21,10 @@ The program will recognize the following folders in the USB drive:
 /media/2/
 /media/3/
 
+The files can either be put in the specified folders or Resilio sync can be used to sync them, the setup installs it if the prompt is yes.
+Resilio is accesible on port 8888.
+The initial user and password for the schedule interface is "orar" without brackets, and can be changed in the login.php file.
+
 Installation instructions:
 
 Download the files with command:
