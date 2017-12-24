@@ -6,19 +6,18 @@ if pgrep omxplayer; then
   exit;
 fi
 
-# Variabile
+# Variables
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
-MEDIA_PATH=/home/pi/data/syncaod/media
-AUDIO_OUTPUT=local # hdmi sau local
+AUDIO_OUTPUT=both # hdmi, local, both if no config.txt
+VOLUME=-1200
 
 # External config
 if [ -f /var/www/html/config.txt ]; then
   source /var/www/html/config.txt
 fi
 
-# Variabile
-AUDIO_OUTPUT=both
+# Variables
 MEDIA_PATH=/home/pi/data/syncaod/media
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
@@ -54,13 +53,13 @@ while true; do
 				echo "file_$index = "${lista[$index]}
 				if ([ $ora -ge $f11 ] && [ $ora -lt $f10 ] && [ $index -ge '1' ] && [ $random -eq 0 ]); then
 				echo -e "\nSe reda $MEDIA_PATH/1/"${lista[$(($index))]}
-				omxplayer --vol -1200 -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/1/${lista[$(($index))]}"
+				omxplayer --vol $VOLUME -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/1/${lista[$(($index))]}"
 				source /var/www/html/config.txt
 				fi
 			done
 			if ([ $ora -ge $f11 ] && [ $ora -lt $f10 ] && [ $index -ge '1' ] && [ $random -eq 1 ]); then
 				echo -e "\nSe reda $MEDIA_PATH/1/"${lista[$((RANDOM % $index))]}
-				omxplayer --vol -1200 -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/1/${lista[$((RANDOM % $index))]}"
+				omxplayer --vol $VOLUME -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/1/${lista[$((RANDOM % $index))]}"
 				source /var/www/html/config.txt
 			fi
 		elif ([ $ora -ge $f21 ] && [ $ora -lt $f20 ]); then
@@ -72,13 +71,13 @@ while true; do
 				echo "file_$index = "${lista[$index]}
 				if ([ $ora -ge $f21 ] && [ $ora -lt $f20 ] && [ $index -ge '1' ] && [ $random -eq 0 ]); then
 				echo -e "\nSe reda $MEDIA_PATH/2/"${lista[$(($index))]}
-				omxplayer --vol -1200 -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/2/${lista[$((RANDOM % $index))]}"
+				omxplayer --vol $VOLUME -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/2/${lista[$((RANDOM % $index))]}"
 				source /var/www/html/config.txt
 				fi
 			done
 			if ([ $ora -ge $f21 ] && [ $ora -lt $f20 ] && [ $index -ge '1' ] && [ $random -eq 1 ]); then
 				echo -e "\nSe reda $MEDIA_PATH/2/"${lista[$((RANDOM % $index))]}
-				omxplayer --vol -1200 -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/2/${lista[$((RANDOM % $index))]}"
+				omxplayer --vol $VOLUME -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/2/${lista[$((RANDOM % $index))]}"
 				source /var/www/html/config.txt
 			fi
 		elif ([ $ora -ge $f31 ] && [ $ora -lt $f30 ]); then
@@ -90,13 +89,13 @@ while true; do
 				echo "file_$index = "${lista[$index]}
 				if ([ $ora -ge $f31 ] && [ $ora -lt $f30 ] && [ $index -ge '1' ] && [ $random -eq 0 ]); then
 				echo -e "\nSe reda $MEDIA_PATH/3/"${lista[$(($index))]}
-				omxplayer --vol -1200 -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/3/${lista[$((RANDOM % $index))]}"
+				omxplayer --vol $VOLUME -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/3/${lista[$((RANDOM % $index))]}"
 				source /var/www/html/config.txt
 				fi
 			done
 			if ([ $ora -ge $f31 ] && [ $ora -lt $f30 ] && [ $index -ge '1' ] && [ $random -eq 1 ]); then
 				echo -e "\nSe reda $MEDIA_PATH/3/"${lista[$((RANDOM % $index))]}
-				omxplayer --vol -1200 -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/3/${lista[$((RANDOM % $index))]}"
+				omxplayer --vol $VOLUME -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/3/${lista[$((RANDOM % $index))]}"
 				source /var/www/html/config.txt
 			fi
 		else
