@@ -13,7 +13,7 @@ if (!USERNAME or isset($_GET['logout']))
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>PROGRAMARE ORAR</title>
+<title>Schedule</title>
 <script language="javascript" src="serverDate.js"></script>
 <?php
 //conectare mysql:
@@ -157,11 +157,11 @@ Random:
 <br />
 <form action="index.php" method="get">
 <input type="hidden" name="restart" size="5" value="<?php echo $restart; ?>">
-<input type="submit" value="Restart System">
+<input type="submit" value="Restart Pi">
 </form>
 <br />
 <br />
-The from and to fields must have values between 0 and 24, to not run a file at all the from field must be 24.
+The "from" and "to" fields must have values between 0 and 24, to not run a folder at all the "from" field must be 24 or smaller than the "to" value.
 </center>
 </body>
 </html>
