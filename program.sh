@@ -10,7 +10,7 @@ fi
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
 AUDIO_OUTPUT=both # hdmi, local, both if no config.txt
-VOLUME=-1200
+VOLUME=0
 
 # External config
 if [ -f /var/www/html/config.txt ]; then
