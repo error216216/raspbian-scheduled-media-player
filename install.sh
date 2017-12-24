@@ -54,6 +54,7 @@ while true; do
     esac
 done
 fi
+apt-get -y install samba
 apt-get install python-mysqldb --yes
 while true; do
     read -p "Do you wish to install resilio sync? " yn
