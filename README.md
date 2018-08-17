@@ -45,5 +45,5 @@ Run installer with command:
 sudo ./install.sh
 
 It will ask you to install dependencies: mariaDB, apache2, php7.
-Caution, during install the following files will be overwritten: index.php and index.html from /var/www/html/ , if it's a new install you have nothing to worry about.
+Caution, during install the following files will be overwritten: index.php and index.html from /var/www/html/ , if it's a new install of raspbian you have nothing to worry about.
 
