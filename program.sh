@@ -46,7 +46,7 @@ while true; do
 		fi
 		if ([ $ora -ge $f11 ] && [ $ora -lt $f10 ]); then
 			echo -e "Playing folder 1:\n"
-			index=0
+			index=1
 			for f in `ls $MEDIA_PATH/1 | grep ".mp4$\|.avi$\|.mkv$\|.mp3$\|.mov$\|.mpg$\|.flv$\|.m4v$\|.divx$"`; do
 				lista[$index]=$f
 				echo "file_$index = "${lista[$index]}
@@ -64,7 +64,7 @@ while true; do
 			fi
 		elif ([ $ora -ge $f21 ] && [ $ora -lt $f20 ]); then
 			echo -e "Playing folder 2:\n"
-			index=0
+			index=1
 			for f in `ls $MEDIA_PATH/2 | grep ".mp4$\|.avi$\|.mkv$\|.mp3$\|.mov$\|.mpg$\|.flv$\|.m4v$\|.divx$"`; do
 				lista[$index]=$f
 				echo "file_$index = "${lista[$index]}
@@ -82,7 +82,7 @@ while true; do
 			fi
 		elif ([ $ora -ge $f31 ] && [ $ora -lt $f30 ]); then
 			echo -e "Playing folder 3:\n"
-			index=0
+			index=1
 			for f in `ls $MEDIA_PATH/3 | grep ".mp4$\|.avi$\|.mkv$\|.mp3$\|.mov$\|.mpg$\|.flv$\|.m4v$\|.divx$"`; do
 				lista[$index]=$f
 				echo "file_$index = "${lista[$index]}
