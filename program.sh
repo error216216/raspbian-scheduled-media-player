@@ -70,7 +70,7 @@ while true; do
 				echo "file_$index = "${lista[$index]}
 				if ([ $ora -ge $f21 ] && [ $ora -lt $f20 ] && [ $index -ge '1' ] && [ $random -eq 0 ]); then
 				echo -e "\nPlaying $MEDIA_PATH/2/"${lista[$(($index))]}
-				omxplayer --vol $VOLUME -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/2/${lista[$((RANDOM % $index))]}"
+				omxplayer --vol $VOLUME -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/2/${lista[$(($index))]}"
 				source /var/www/html/config.txt
 				fi
 				let "index += 1"
@@ -88,7 +88,7 @@ while true; do
 				echo "file_$index = "${lista[$index]}
 				if ([ $ora -ge $f31 ] && [ $ora -lt $f30 ] && [ $index -ge '1' ] && [ $random -eq 0 ]); then
 				echo -e "\nPlaying $MEDIA_PATH/3/"${lista[$(($index))]}
-				omxplayer --vol $VOLUME -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/3/${lista[$((RANDOM % $index))]}"
+				omxplayer --vol $VOLUME -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/3/${lista[$(($index))]}"
 				source /var/www/html/config.txt
 				fi
 				let "index += 1"
